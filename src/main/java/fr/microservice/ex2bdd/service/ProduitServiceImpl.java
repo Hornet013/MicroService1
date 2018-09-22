@@ -3,6 +3,7 @@ package fr.microservice.ex2bdd.service;
 import fr.microservice.ex2bdd.ProduitRepository;
 import fr.microservice.ex2bdd.domain.Produit;
 import fr.microservice.ex2bdd.exception.ProduitAlreadyExistsException;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

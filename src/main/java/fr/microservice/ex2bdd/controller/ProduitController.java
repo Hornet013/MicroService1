@@ -3,6 +3,7 @@ package fr.microservice.ex2bdd.controller;
 import fr.microservice.ex2bdd.domain.Produit;
 import fr.microservice.ex2bdd.exception.ProduitAlreadyExistsException;
 import fr.microservice.ex2bdd.service.ProduitService;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ public class ProduitController {
         this.produitService = produitService;
     }
 
+    @ApiOperation(value = "Liste tous les produits", responseContainer = "List")
     @RequestMapping(value = "/produits", method = RequestMethod.GET, produces = {"application/json"})
     public List<Produit> listProduit() {
         LOGGER.debug("Récupération de tous les produits");
